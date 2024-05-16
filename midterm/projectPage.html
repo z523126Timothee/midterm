@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details - Timothee de Boynes</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="back-link">&#9664;</a>
+
+        <h1 id="project-title">Project Title</h1>
+    </header>
+    <div class="detailContainer">
+        <div class="detailCard">
+            <h2>Project Overview</h2>
+            <p id="project-description">Project Description</p>
+        </div>
+        <img id="project-image" src="" alt="Project Image" style="width:100%; height:auto; border-radius:10px;">
+        <div class="detailCard">
+            <h2>More information</h2>
+            <p id="project-moreInfo">Project Description</p>
+        </div>
+    </div>
+
+    <script>
+        const projects = {
+            1: {
+                title: "LocalShirt",
+                image: "images/LocalShirt.png",
+                description: `LocalShirt is a web extension that helps its consumers find responsible alternatives to the textile products they purchase online.`,
+                moreInfo: `The suggested alternatives offer a more positive environmental and ethical impact. Thus, the user can continue to buy products that meet their initial expectations without having to change their consumption habits.<br><br>
+                Information about the alternative such as price and its ecological/ethical benefits will be presented to the user. If the user wishes to purchase a suggested alternative, there will be a redirect button to the website where the item is located.<br><br>
+                To be able to suggest these alternatives, Partner Brands will have the opportunity to collaborate with us. As a result, they will have an account that allows them to access the dedicated partner section. This section enables them to add and interact with the items they want to propose as alternatives.`
+            },
+            2: {
+                title: "AI2DIY",
+                image: "images/ai.png",
+                description: `The Artificially Intelligent DIY Assistant! Because who needs real expertise when you can
+                    have an AI that pretends it knows everything about everything?`,
+                moreInfo: `From baking soufflés to building rocket ships
+                    out of household items, AI2DIY will confidently guide you through tasks it\'s never even heard of before.
+                    <br>
+                    It\'s
+                    like having a know-it-all friend who's actually clueless but charmingly convinced otherwise.
+                    <br><br>Disclaimer: <br>Side
+                    effects may include overconfidence in spaghetti-throwing skills and questionable fashion advice from your AI
+                    stylist.`
+            }
+        };
+
+        function getProjectId() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('id');
+        }
+
+        function loadProjectDetails() {
+            const projectId = getProjectId();
+            const project = projects[projectId];
+
+            if (project) {
+                document.getElementById('project-title').textContent = project.title;
+                document.getElementById('project-image').src = project.image;
+                document.getElementById('project-description').innerHTML = project.description;
+                document.getElementById('project-moreInfo').innerHTML = project.moreInfo;
+            } else {
+                document.getElementById('project-title').textContent = "Project Not Found";
+                document.getElementById('project-image').style.display = 'none';
+                document.getElementById('project-description').innerHTML = "The project you are looking for does not exist.";
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadProjectDetails);
+    </script>
+</body>
+
+</html>

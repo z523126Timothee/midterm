@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timothee de Boynes - Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <header>
+    <img src="images/tim.png" alt="Timothee de Boynes" class="profile-photo">
+    <h1>Timothee de Boynes</h1>
+    <p>Developer</p>
+
+    <nav class="nav-container">
+      <a href="#" data-target="about" class="custom-button">About Me</a>
+      <a href="#" data-target="projects" class="custom-button">Projects</a>
+      <a href="#" data-target="contact" class="custom-button">Contact</a>
+    </nav>
+  </header>
+
+  <div id="about" class="container active">
+    <div class="card">
+      <h2>About Me</h2>
+    </div>
+    <div class="card">
+      <p>I am a passionate web developer with experience in HTML, CSS, and JavaScript.</p>
+    </div>
+  </div>
+
+  <div id="projects" class="container">
+    <div class="card">
+      <h2>Projects</h2>
+    </div>
+    <div class="card">
+
+      <div class="project">
+        <h3><a href="projectPage.html?id=1">LocalShirt</a></h3>
+        <p>LocalShirt is a web extension that helps its consumers find responsible alternatives to the textile products
+          they purchase online.
+          <br>
+          <br>
+          The suggested alternatives offer a more positive environmental and ethical impact. Thus, the user can continue
+          to buy products that meet their initial expectations without having to change their consumption habits.
+          <br>
+          <br>
+
+          Information about the alternative such as price and its ecological/ethical benefits will be presented to the
+          user. If the user wishes to purchase a suggested alternative, there will be a redirect button to the website
+          where the item is located.
+          <br>
+          <br>
+
+          To be able to suggest these alternatives, Partner Brands will have the opportunity to collaborate with us. As
+          a result, they will have an account that allows them to access the dedicated partner section. This section
+          enables them to add and interact with the items they want to propose as alternatives..
+        </p>
+        <img src="images/LocalShirt.png" alt="Project Image" style="width:100%; height:auto; border-radius:10px;">
+      </div>
+    </div>
+    <div class="card">
+      <div class="project">
+      </div>
+        <h3><a href="projectPage.html?id=2">AI2DIY</a></h3>
+        <p>The Artificially Intelligent DIY Assistant! Because who needs real expertise when you can
+          have an AI that pretends it knows everything about everything?
+          <br>
+          <br>
+          From baking soufflés to building rocket ships
+          out of household items, AI2DIY will confidently guide you through tasks it's never even heard of before.
+          <br>
+          It’s
+          like having a know-it-all friend who's actually clueless but charmingly convinced otherwise.
+          <br><br>Disclaimer: <br>Side
+          effects may include overconfidence in spaghetti-throwing skills and questionable fashion advice from your AI
+          stylist.
+        </p>
+        <img src="images/ai.png" alt="Project Image" style="width:100%; height:auto; border-radius:10px;">
+    </div>
+  </div>
+
+  <div id="contact" class="container">
+    <div class="card">
+      <h2>Contact</h2>
+      <p>Email: my.email@example.com</p>
+      <p>Phone: 00 00 00 00 00</p>
+      <p>Website: www.jaj.com</p>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelectorAll('.container').forEach(container => {
+          container.classList.remove('active');
+        });
+        document.getElementById(this.dataset.target).classList.add('active');
+      });
+    });
+  </script>
+</body>
+
+</html>
