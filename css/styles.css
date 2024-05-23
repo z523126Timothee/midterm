@@ -1,49 +1,5 @@
-/* General styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
-
-.container {
-  display: none;
-  max-width: 960px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-h1,
-h2,
-h3 {
-  margin-bottom: 0.5rem;
-}
-
-p {
-  margin-bottom: 1rem;
-}
-
-/* Header styles */
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
-}
-
-/* Card styles */
-.card {
-  background-color: #fff;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive styles */
 @media (max-width: 768px) {
 
-  /* Styles for tablets */
   .container {
     padding: 0 0.5rem;
   }
@@ -51,7 +7,6 @@ header {
 
 @media (max-width: 576px) {
 
-  /* Styles for mobile devices */
   h1 {
     font-size: 24px;
   }
@@ -61,6 +16,17 @@ header {
   }
 }
 
+h1,h2,h3 {
+  font-family: 'Merriweather', serif;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-family: 'Roboto';
+  margin-bottom: 1rem;
+}
+
+/* Classes */
 .profile-photo {
   width: 100px;
   height: 100px;
@@ -68,17 +34,6 @@ header {
   object-fit: cover;
 }
 
-nav {
-  margin-left: auto;
-  display: flex;
-  gap: 20px;
-}
-
-.container.active {
-  display: block;
-}
-
-/* Button styles */
 .custom-button {
   display: inline-block;
   padding: 10px 20px;
@@ -88,6 +43,50 @@ nav {
   border: 2px solid #2980b9;
   border-radius: 10%;
   transition: background-color 0.3s ease;
+}
+
+.container {
+  display: none;
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.container.active {
+  display: block;
+}
+
+.card {
+  background-color: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav {
+  margin-left: auto;
+  display: flex;
+  gap: 20px;
 }
 
 .custom-button:hover {
@@ -100,22 +99,26 @@ nav {
 
 .arrow-icon {
   color: white;
-  margin-right: 5px; /* Adjust spacing as needed */
+  margin-right: 5px;
 }
+
+.back-link:hover {
+  color: rgb(152, 157, 242);
+}
+
+
+
+
+/* Project Page */
 
 .back-link {
   position: absolute;
   top: 1%;
   left: 1%;
-  color: white; /* Set the color to white */
+  color: white;
   text-decoration: none;
-  font-size: 40px; /* Adjust font size to make the arrow bigger */
-  padding: 10px; /* Add padding for spacing */
-}
-
-
-.back-link:hover {
-  color: rgb(152, 157, 242); /* Change arrow color on hover to black */
+  font-size: 40px;
+  padding: 10px;
 }
 
 .detailContainer {
@@ -130,9 +133,4 @@ nav {
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.nav-container {
-  display: flex;
-  justify-content: center;
 }

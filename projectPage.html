@@ -11,22 +11,22 @@
 <body>
     <header>
         <a href="index.html" class="back-link">&#9664;</a>
-
-        <h1 id="project-title">Project Title</h1>
+        <h1 id="project-title">Project Title Holder</h1> <!-- Will get the correct content from the loadProjectDetails function -->
     </header>
     <div class="detailContainer">
         <div class="detailCard">
             <h2>Project Overview</h2>
-            <p id="project-description">Project Description</p>
+            <p id="project-description">Project Description</p> <!-- Will get the correct content from the loadProjectDetails function -->
         </div>
-        <img id="project-image" src="" alt="Project Image" style="width:100%; height:auto; border-radius:10px;">
+        <img id="project-image" src="" alt="Clicked Project Image" style="width:100%; height:auto; border-radius:10px;"> <!-- Will get the correct content from the loadProjectDetails function -->
         <div class="detailCard">
             <h2>More information</h2>
-            <p id="project-moreInfo">Project Description</p>
+            <p id="project-moreInfo">Project Description</p> <!-- Will get the correct content from the loadProjectDetails function -->
         </div>
     </div>
 
     <script>
+        // content for the fields to fill with the correct information depending on the project selected
         const projects = {
             1: {
                 title: "LocalShirt",
